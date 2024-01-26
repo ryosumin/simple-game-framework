@@ -1,9 +1,9 @@
+@tool
 # Buff的调度器
 # 用于管理调度游戏中的 Buff 对象
 # 添加到此调度器的 Buff 会在被启动（如果未启动过的话），已经停止的 Buff 会在下一帧开始时被移除
 # 移除Buff时会强制触发停止（如果该buff正在运行）
 
-tool
 extends Module
 class_name BuffModule
 
@@ -15,12 +15,12 @@ func add_buff(buff: Buff):
 	if not buffs.has(buff):
 		if not buff.is_running():
 			buff.start()
-		buff.connect(Buff.Events.STOPPED, self, "remove_buff", [buff])
+		buff.connect(Buff.Events.STOPPED, Callable(self, "remove_buff").bind(buff))
 		buffs[buff] = true
 
 # 删除 Buff
 func remove_buff(buff: Buff):
-	buff.disconnect(Buff.Events.STOPPED, self, "remove_buff")
+	buff.disconnect(Buff.Events.STOPPED, Callable(self, "remove_buff"))
 	if buffs.has(buff):
 		if buffs[buff]:
 			buffs[buff] = false

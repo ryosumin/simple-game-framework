@@ -1,7 +1,7 @@
+@tool
 # 逻辑模块
 # 代表一个逻辑功能，例如成就、商店、战斗等
 
-tool
 extends EventEmitter
 class_name Module
 

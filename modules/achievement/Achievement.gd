@@ -1,3 +1,4 @@
+@tool
 ##################################################################################
 #                            This file is part of                                #
 #                                GodotExplorer                                   #
@@ -27,7 +28,6 @@
 # @class `Achievement`
 # 成就
 
-tool
 extends EventEmitter
 class_name Achievement
 

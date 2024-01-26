@@ -1,7 +1,7 @@
+@tool
 # 条件类，表示一些条件
 # 如任务是否完成、条件是否能够解锁等
 
-tool
 extends EventEmitter
 class_name Condition
 

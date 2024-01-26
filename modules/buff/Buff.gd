@@ -1,6 +1,6 @@
+@tool
 # 代表游戏中的一种状态、如 中毒、短暂的攻击力加强效果 等
 
-tool
 extends EventEmitter
 class_name Buff
 

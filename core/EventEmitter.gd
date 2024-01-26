@@ -1,7 +1,7 @@
+@tool
 # 基础事件管理器
 
-tool
-extends Reference
+extends RefCounted
 class_name EventEmitter
 
 # 回调对象

@@ -1,6 +1,6 @@
+@tool
 # 定时器模块
 
-tool
 extends Module
 class_name TimerModule
 

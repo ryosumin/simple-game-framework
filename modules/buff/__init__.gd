@@ -1,5 +1,5 @@
+@tool
 
-tool
 
 const Buff = preload("Buff.gd")
 const BuffModule = preload("BuffModule.gd")

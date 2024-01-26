@@ -1,12 +1,12 @@
+@tool
 # 限时Buff， 指定时刻之前有效，超时自动停止效果
 # 时间指的是真实时间，因此不受游戏暂停或玩家离线等条件的影响，超过指定时间后失效
 
-tool
 extends Buff
 class_name TimerBuff
 
 # 剩余时间(秒)
-var time_left = 0 setget set_time_left, get_time_left
+var time_left = 0: get = get_time_left, set = set_time_left
 
 # 设定时长，启动后修改无效
 var duration = 5

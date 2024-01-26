@@ -1,5 +1,5 @@
+@tool
 
-tool
 extends Node
 
 const core = preload("core/__init__.gd")

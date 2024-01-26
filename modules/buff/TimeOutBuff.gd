@@ -1,14 +1,14 @@
+@tool
 # 限时Buff， `duration` 时间内有效，超时自动停止效果
 # 时间限制指的是逻辑更新时间，因此游戏暂停或玩家离线时时间是静止的，逻辑恢复更新后继续计时
 
-tool
 extends Buff
 class_name TimeOutBuff
 
 # 超时时长(秒)
 var duration = 5
 # 剩余时间(秒)
-var time_left = 0 setget set_time_left, get_time_left
+var time_left = 0: get = get_time_left, set = set_time_left
 # 已经开始的时间(秒)
 var _started_duration = 0
 # 设置剩余时间(秒)

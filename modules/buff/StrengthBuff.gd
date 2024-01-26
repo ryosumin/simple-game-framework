@@ -1,6 +1,6 @@
+@tool
 # 带强度的 Buff， `strength` 衰减小于等于0时失效
 
-tool
 extends Buff
 class_name StrengthBuff
 

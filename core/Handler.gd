@@ -1,12 +1,12 @@
+@tool
 # 回调函数
 
-tool
-extends Reference
+extends RefCounted
 class_name Handler
 
 var method: String = ""	# 回调方法
 var arguments = []		# 回调附加参数
-var target: Object = null setget _set_target, _get_target # 回调对象
+var target: Object = null: get = _get_target, set = _set_target # 回调对象
 
 var _target_instance_id = 0
 func _set_target(target: Object):

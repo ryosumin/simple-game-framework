@@ -1,5 +1,5 @@
+@tool
 
-tool
 
 const EventEmitter = preload("EventEmitter.gd")
 const Handler = preload("Handler.gd")

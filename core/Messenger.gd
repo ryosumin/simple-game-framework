@@ -1,6 +1,6 @@
+@tool
 # 消息调度器，允许添加监听所有类型事件的监听器
 
-tool
 extends EventEmitter
 class_name Messenger
 const utils = preload("../utils.gd")
@@ -40,4 +40,4 @@ func remove_all_liseners():
 func emit(type: String, params = []):
 	for listener in _listeners:
 		listener.on_event(type, params)
-	.emit(type, params)
+	super.emit(type, params)

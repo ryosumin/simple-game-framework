@@ -1,5 +1,5 @@
+@tool
 
-tool
 
 const AutoIncreasedGamePoint = preload("AutoIncreasedGamePoint.gd")
 const DailyTask = preload("DailyTask.gd")

@@ -1,6 +1,6 @@
+@tool
 # 每日任务模块， 所有注册的回调函数会在每天第一次运行游戏时被执行一次
 
-tool
 extends Module
 class_name DailyTask
 
@@ -12,11 +12,11 @@ var tasks = []
 var records = []
 
 func now():
-	return OS.get_unix_time()
+	return Time.get_unix_time_from_system()
 
 func _daily_check():
-	var date = OS.get_datetime_from_unix_time(last_run_task_time)
-	var today = OS.get_datetime()
+	var date = Time.get_datetime_dict_from_system_from_unix_time(last_run_task_time)
+	var today = Time.get_datetime_dict_from_system()
 	return date.year != today.year or date.month != today.month or date.day != today.day
 
 func _run_tasks():

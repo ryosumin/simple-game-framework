@@ -1,7 +1,7 @@
+@tool
 # 游戏点数，可用于如 体力 金币 等相关的数值记录
 # 支持按固定时间间隔自动获得奖励
 
-tool
 extends GamePoint
 class_name AutoIncreasedGamePoint
 
@@ -69,10 +69,10 @@ func _frame_auto_charge():
 		_charge_for_duration(duration)
 
 func save() -> Dictionary:
-	var data = .save()
+	var data = super.save()
 	data.last_charge_time = _last_auto_charge_time
 	return data
 
 func load(data: Dictionary):
-	.load(data)
+	super.load(data)
 	_offline_point_reward(now() - data.last_charge_time)

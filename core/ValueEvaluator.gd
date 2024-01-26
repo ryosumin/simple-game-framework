@@ -1,6 +1,6 @@
+@tool
 # 数值取值器
 
-tool
 extends EventEmitter
 class_name ValueEvaluator
 
